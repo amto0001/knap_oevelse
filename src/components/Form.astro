@@ -2,19 +2,23 @@
 import Button from "./Button.astro"
 ---
 
-<form>
+<form class="[&>div]:my-4">
+<div>
   <label for="fname">Navn:</label><br>
   <input type="text" id="fname" name="fname" placeholder="Lars Larsen"><br>
+  </div>
+  <div>
   <label for="lname">Mail:</label><br>
   <input type="text" id="lname" name="lname" placeholder="Lars@larsen.com" ><br>
+  </div>
+  <div>
 <label for="lname">Telefon:</label><br>
   <input type="text" id="lname" name="lname" placeholder="+45 20 30 40 50">
+  </div>
 
-  <div class=""><span> Tilmeld nyhedsbrev: </span> <br><input type="radio" id="Ja">
+  <div class="form"><span> Tilmeld nyhedsbrev: </span> <br><input type="radio" id="Ja">
     <label for="Ja" checked= "checked"> Ja </label>
     <input type="radio" id="Nej"> <label for="Nej" checked= "checked"> Nej </label> <br>
 <Button>Tilmeld</Button>
 </div>
-
-
 </form>

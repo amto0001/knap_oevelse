@@ -1,5 +1,36 @@
 ---
+import { addIssueToContext } from "astro:schema";
+
 // Henter parametrene fra Astro.props
-const { href="#", target="_self"} = Astro.props; 
+const { href="#", target="_self", variant="textlink", size="standard"} = Astro.props; 
+
+ 
+//Definer den styling (Tailwind classes, der gør sig gældende for alle knapper
+
+const LinkStyling =  "rounded-md border-2 text-white"; 
+
+ 
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
+
+const variantClasses = {
+
+"primary": "bg-sky-400 hover:bg-sky-800",
+
+"secondary": "bg-sky-800 hover:bg-sky-400"
+
+};
+
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
+
+const sizeClasses = {
+
+"large": "p-4  text-2xl font-bold uppercase",
+
+"medium": " p-2 text-md font-semibol uppercase",
+
+"small": "p-1 text-sm font-light uppercase"
+
+};
+
 ---
-<a href={href} class="underline" target={target}><slot /></a>
+<a href={href} target={target} class:list={[LinkStyling, variantClasses[variant], sizeClasses[size]]}> <slot/></a>

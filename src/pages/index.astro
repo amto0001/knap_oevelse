@@ -8,13 +8,41 @@ import Form from "../components/Form.astro";
 ---
 <MainLayout title="Titel">
 	<article>
-		<h1>HER ER EKSEPEL PÅ ET KNAP DESIGNSYSTEN</h1>
+		<h1 class="text-2xl font-bold text-violet-300 my-8" >HER ER EKSEPEL PÅ ET KNAP DESIGNSYSTEN</h1>
 
 <Button variant="primary" size="small">primary small</Button>
 <Button variant="primary" size="medium">primary medium</Button>
 <Button variant="primary" size="large">primary large</Button>
 <Button variant="secondary" size="small">secondary small</Button>
 
+<h1 class="text-2xl font-bold text-violet-300 my-8">HER ER ET EKSEMPEL PÅ EN FORM</h1>
 <Form></Form>
+
+
+<h1 class="text-2xl font-bold text-violet-300 my-8" >HER ER ET EKSEMPEL PÅ LINKS</h1>
+
+<div>
+<p>Link til <Link href="https://www.kea.dk" target="_blank" variant="textlink" size="standard">En anden side</Link></p><br>
+</div>
+<div>
+<p>Link til <Link href="https://www.kea.dk" target="_blank" variant="primary" size="small">En anden side</Link></p> <br>
+</div>
+<div>
+<p>Link til <Link href="https://www.kea.dk" target="_blank" variant="primary" size="medium">En anden side</Link></p><br>
+</div>
+<div>
+<p>Link til <Link href="https://www.kea.dk" target="_blank" variant="primary" size="large">En anden side</Link></p><br>
+</div>
+<div>
+<p>Link til <Link href="https://www.kea.dk" target="_blank" variant="secondary" size="small">En anden side</Link></p><br>
+</div>
+<div>
+<p>Link til <Link href="https://www.kea.dk" target="_blank" variant="secondary" size="medium">En anden side</Link></p><br>
+</div>
+<div  >
+<p>Link til <Link href="https://www.kea.dk" target="_blank" variant="secondary" size="large">En anden side</Link></p><br>
+</div>
+
+
 	</article>
 </MainLayout>
